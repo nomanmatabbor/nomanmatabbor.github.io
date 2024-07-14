@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQGNY74134"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QQGNY74134');
+</script>
+<!-- Google tag (gtag.js) -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- Bootstrap Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Card Code Generator - Amazon, iTunes and many more</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="cardcodegenerator, card code generator, free amazon gift card, free itunes gift card code, free gift cards, google play gift card, netflix gift card, unused gift card code">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Generate free gift card codes for popular platforms like Amazon, iTunes, Google Play, and Netflix. Unlock access to a variety of unused gift card codes with our online card code generator. Get started today!">
+    
+    
+    <!--Prevent right click-->
+    <script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    });
+    </script>
+    
+
+    
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <h1>
+        <a class="navbar-brand" href="https://cardcodegenerator.com/">Card Code Generator</a>
+        </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/offers">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					
+                        <li><a class="dropdown-item" href="about.php">About</a></li>
+                        <li><a class="dropdown-item" href="disclaimer.php">Disclaimer</a></li>
+						<li><a class="dropdown-item" href="contact.php">Contact</a></li>
+						<li><a class="dropdown-item" href="privacy.php">Privacy</a></li>
+						<li><a class="dropdown-item" href="terms.php">Terms</a></li>
+                        <!-- Add more dropdown options as needed -->
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Others
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					
+                        <li><a class="dropdown-item" href="/generators/slug-generator.html">Slug Maker</a></li>
+                        <li><a class="dropdown-item" href="/generators/word-sentence-char-counter.html">Word Counter</a></li>
+                        <!-- Add more dropdown options as needed -->
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--Scroll Menu-->
+    <div class="container">
+    <div class="scrollmenu">
+      <a href="/offers">Offers (Country wise Offers)</a>
+      <a href="/features/netflix-premium/">Netflix Premium Account</a>
+      <a href="/quiz">Win by Quiz</a>
+      
+    </div>
+  </div>
+<!--Scroll Menu-->
+
+
+<!--Alert message-->
+    <div class="container mt-4">
+        
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <!--
+        <img src="https://3.bp.blogspot.com/-RzsAO993gtw/W1dFHnTUrGI/AAAAAAAAp-M/2_lCCA7eKJMWMqP2hOM794dEcLZGjoMewCEwYBhgL/s1600/world_flags_globe_2.gif" class="mr-3" alt="globe-rounding" style="max-width: 100px;">
+        -->
+       
+  <strong>Holy friend!</strong> To get special gift cards- <b><a href="https://yourpowercardgenerating.on.drv.tw/www.3powercard.com/">Click Here</a></b>.
+  <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+    
+  </button>
+</div>
+  </div>
+<!--Alert message-->
+
+<!--Search box-->
+
+ <div class="container mt-5">
+        <h3>Search for Special</h3>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="form-control" placeholder="Start typing...">
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const suggestionsContainer = document.getElementById('suggestions');
+        const searchContainer = document.querySelector('.search-container');
+
+//Add cards name here, then assign the name and put link below.
+        const suggestions = ['Netflix', 'iPhone 14'];
+
+        searchInput.addEventListener('input', () => {
+            const searchValue = searchInput.value.toLowerCase();
+            const filteredSuggestions = suggestions.filter(suggestion =>
+                suggestion.toLowerCase().includes(searchValue)
+            );
+
+            suggestionsContainer.innerHTML = '';
+
+            if (filteredSuggestions.length > 0) {
+                suggestionsContainer.style.display = 'block';
+            } else {
+                suggestionsContainer.style.display = 'none';
+            }
+
+            filteredSuggestions.forEach(suggestion => {
+                const suggestionElement = document.createElement('div');
+                suggestionElement.textContent = suggestion;
+                suggestionElement.className = 'suggestion-item';
+
+                suggestionElement.addEventListener('click', () => {
+                    const link = getSuggestionLink(suggestion);
+                    if (link) {
+                        window.location.href = link;
+                    }
+                });
+
+                suggestionsContainer.appendChild(suggestionElement);
+            });
+        });
+
+        // Add a click event listener to the document
+        document.addEventListener('click', (event) => {
+            // Check if the clicked element is within the search container
+            if (!searchContainer.contains(event.target)) {
+                suggestionsContainer.style.display = 'none';
+            }
+        });
+
+        function getSuggestionLink(suggestion) {
+            // Replace with your own mapping of suggestions to links
+            const linkMap = {
+                // Add more suggestions and links here
+                'iPhone 14': '#',
+                'Netflix': '/features/netflix-premium/',
+                
+            };
+
+            return linkMap[suggestion];
+        }
+    </script>
+  
+<!--Search box-->
+
+
+
+<!-- Info floating button -->
+ <!-- Info floating button -->
+    <button type="button" class="btn btn-info sticky-info-button" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+        ? Info
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Here are the instructions to generate a new gift card code:</p>
+                <ul>
+                    <li>Step 1: Click on your desired card.</li>
+                    <li>Step 2: Wait to be generated.</li>
+                    <li>Step 3: Click on Verify button and verify that you are human.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal JavaScript -->
+<!-- Info floating button -->
+
+
+<!-- Share button -->
+
+
+<!-- Share button -->
+<div class="sticky-share-button">
+    <div class="share-button" data-bs-toggle="modal" data-bs-target="#shareModal">
+        <span class="share-icon"><i class="bi bi-share"></i></span>
+        Share
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shareModalLabel">Share this Page</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body share-options">
+                <p>Choose an option to share:</p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cardcodegenerator.com%2F" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-facebook"></i> Share on Facebook
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.cardcodegenerator.com%2F&text=Check%20out%20this%20awesome%20website!" target="_blank" class="btn btn-info">
+                    <i class="bi bi-twitter"></i> Share on Twitter
+                </a>
+                <button class="btn btn-secondary" id="copyLinkButton">
+                    <i class="bi bi-link-45deg"></i> Copy Link
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("copyLinkButton").addEventListener("click", function () {
+        const link = window.location.href;
+        navigator.clipboard.writeText(link)
+            .then(() => {
+                alert("Link copied to clipboard!");
+            })
+            .catch(err => {
+                console.error("Unable to copy link: ", err);
+            });
+    });
+</script>
+<!-- Share button -->
+
+<!--Earn Credit Button-->
+<a href="https://lockwall.xyz/wall/7SY">
+    <button type="button" class="btn btn-success sticky-success-button">
+        Earn Credit
+    </button>
+</a>
+<!--Earn Credit Button-->
+
+
+
+<div class="container mt-5">
+    <h2>Terms and Conditions</h2>
+	<p>Welcome to our website. By using our website, you agree to comply with and be bound by the following terms and conditions of use:</p>
+
+    <p>The content of this website is for general information and use only. It is subject to change without notice.</p>
+
+    <p>Your privacy is important to us. Please review our <a href="privacy.html">Privacy Policy</a> for information on how we collect, use, and disclose personal information.</p>
+
+    <p>The information contained in this website is for general information purposes only. We do not provide any warranty or guarantee as to the accuracy, completeness, suitability, or availability of the information found on this website.</p>
+
+    <p>We shall not be liable for any loss or damage arising out of the use of this website. It is your responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</p>
+
+    <p>We may modify these terms and conditions at any time, so please review them regularly. Your continued use of this website after any changes indicates your acceptance of the modified terms.</p>
+
+    <p>If you have any questions about these terms and conditions, please <a href="contact.html">contact us</a>.</p>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2023 Card Code Generator. All rights reserved.</p>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+</body>
+</html>

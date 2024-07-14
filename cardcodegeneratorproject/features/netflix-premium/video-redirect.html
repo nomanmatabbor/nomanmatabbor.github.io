@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="11;url=https://yts.mx/">
+  <title>Countdown Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+    .message-container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      text-align: center;
+      margin: 20px;
+    }
+    .time {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #999999;
+    }
+    
+    @media (max-width: 576px) {
+      .message-container {
+        font-size: 18px;
+      }
+      .time {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 message-container">
+        <p>We have failed to verify you! Don't worry we will redirect you to a website where you can watch Netflix shows for free.</p>
+        <p class="time" id="countdown">Redirecting in 13 seconds...</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var seconds = 13;
+    var countdownElement = document.getElementById("countdown");
+  
+    function updateCountdown() {
+      countdownElement.textContent = "Redirecting in " + seconds + " seconds...";
+      seconds--;
+
+      if (seconds < 0) {
+        clearInterval(interval);
+        window.location.href = "https://yts.mx/";
+      }
+    }
+  
+    var interval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

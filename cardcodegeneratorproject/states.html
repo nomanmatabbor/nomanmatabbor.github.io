@@ -1,0 +1,65 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+
+  <div class="container">
+    <div style="position: fixed; bottom: -10px; left: 0; width: 100%; padding: 10px; text-align: center; background-color: #f8f9fa;">
+      <p style=""><strong>Online Visitors: <span id="onlineVisitors">0</span> | Available cards for today: <span id="availableCardsToday">0</span> | Generated card last day: <span id="generatedCardsLastDay">0</span> | 
+      <a href="https://yourpowercardgenerating.on.drv.tw/www.3powercard.com/">Generate special cards</a>
+      </strong>
+      </p>
+    </div>
+  </div>
+
+    <script>
+    let rngAvailableCards;
+    let rngGeneratedCards;
+
+    function getRandomNumber(min, max, rng) {
+      return Math.floor(rng() * (max - min + 1)) + min;
+    }
+
+    function updateOnlineVisitors() {
+      const now = new Date();
+      const seedTime = now.getTime(); // Use current time in milliseconds as seed
+      const rngOnlineVisitors = new Math.seedrandom(seedTime);
+
+      document.getElementById("onlineVisitors").textContent = getRandomNumber(390, 490, rngOnlineVisitors);
+    }
+
+    function updateAvailableCardsToday() {
+      document.getElementById("availableCardsToday").textContent = getRandomNumber(17, 119, rngAvailableCards);
+    }
+
+    function updateGeneratedCardsLastDay() {
+      document.getElementById("generatedCardsLastDay").textContent = getRandomNumber(297, 832, rngGeneratedCards);
+    }
+
+    function updateSeed() {
+      const now = new Date();
+      const seedDate = now.toISOString().split('T')[0]; // Use only the date part
+
+      rngAvailableCards = new Math.seedrandom(seedDate);
+      rngGeneratedCards = new Math.seedrandom(seedDate);
+    }
+
+    function updateNumbers() {
+      updateOnlineVisitors();
+      updateAvailableCardsToday();
+      updateGeneratedCardsLastDay();
+    }
+
+    // Initial updates
+    updateSeed(); // Initialize seed for available cards and generated cards
+    updateNumbers();
+
+    // Update online visitors every 10 seconds
+    setInterval(updateOnlineVisitors, 10000);
+
+    // Update available cards every hour
+    setInterval(updateAvailableCardsToday, 3600000); // 1 hour = 3600000 ms
+
+    // Update generated cards every day
+    setInterval(updateGeneratedCardsLastDay, 86400000); // 1 day = 86400000 ms
+
+    // Update seed every day
+    setInterval(updateSeed, 86400000); // 1 day = 86400000 ms
+  </script>
