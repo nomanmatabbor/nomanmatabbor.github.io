@@ -59,23 +59,6 @@
     }
 </style>
 
-
-
-
-<!-- JavaScript to Show/Hide Button -->
-<script>
-    $(document).ready(function() {
-        $('a[data-fluidbox]').fluidbox({
-            afterShow: function(){
-                $('#button-container').show();
-            },
-            afterClose: function(){
-                $('#button-container').hide();
-            }
-        });
-    });
-</script>
-
 	
 </head>
 <body>
@@ -560,7 +543,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="common-js/jquery.fluidbox.min.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
+
 	
+<!-- JavaScript to Show/Hide Button -->
+<script>
+    $(document).ready(function() {
+        $('a[data-fluidbox]').fluidbox({
+            afterShow: function(){
+                $('#button-container').show();
+            },
+            afterClose: function(){
+                $('#button-container').hide();
+            }
+        });
+    });
+</script>
 	
 </body>
 </html>
