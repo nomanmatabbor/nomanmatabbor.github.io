@@ -393,8 +393,55 @@ Problem Solving. </p>
 			</div><!-- p-item -->
 			
 			<div class="p-item articles branding">
-				<a href="Screenshot_6.png" data-fluidbox>
-					<img src="Screenshot_6.png" alt=""></a>
+				
+
+				<!-- Image with Fluidbox and Button -->
+<a href="Screenshot_6.png" data-fluidbox>
+    <img src="Screenshot_6.png" alt="">
+</a>
+<div id="button-container" style="display: none;">
+    <a href="https://drive.google.com/file/d/1MBlypTc7zuUykQMg24S0OylCRkyY4DCJ/view?usp=drivesdk" target="_blank">See Full Project</a>
+</div>
+
+<!-- CSS for the Button -->
+<style>
+    #button-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* Ensure the button is above the overlay */
+    }
+    #button-container a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    #button-container a:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<!-- JavaScript to Show/Hide Button -->
+<script>
+    $(document).ready(function() {
+        $('a[data-fluidbox]').fluidbox({
+            afterShow: function(){
+                $('#button-container').show();
+            },
+            afterClose: function(){
+                $('#button-container').hide();
+            }
+        });
+    });
+</script>
+
+
+				
 				<a href="Screenshot_2024-07-14-23-18-18.png" data-fluidbox>
 					<img src="Screenshot_2024-07-14-23-18-18.png" alt=""></a>
 				<a href="Screenshot_2024-07-14-23-18-57.png" data-fluidbox>
