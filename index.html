@@ -35,30 +35,6 @@
   (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
 </script>
 <!-- End of Async Callbell Code -->
-
-<!-- CSS for the Button -->
-	<style>
-    #button-container {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999; /* Ensure the button is above the overlay */
-    }
-    #button-container a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-    #button-container a:hover {
-        background-color: #0056b3;
-    }
-</style>
-
 	
 </head>
 <body>
@@ -414,20 +390,12 @@ Problem Solving. </p>
 			</div><!-- p-item -->
 			
 			<div class="p-item articles branding">
-				
-
-				<!-- Image with Fluidbox and Button -->
-<a href="Screenshot_6.png" data-fluidbox>
-    <img src="Screenshot_6.png" alt="">
+				<a href="Screenshot_6.png" data-fluidbox>
+					<img src="Screenshot_6.png" alt=""></a>
+				<a href="https://drive.google.com/file/d/1MBlypTc7zuUykQMg24S0OylCRkyY4DCJ/view?usp=drivesdk" style="background-color: #b7aa9c; text-align: center;">
+    Access the Research Project
 </a>
-<div id="button-container" style="display: none;">
-    <a href="https://drive.google.com/file/d/1MBlypTc7zuUykQMg24S0OylCRkyY4DCJ/view?usp=drivesdk" target="_blank">See Full Project</a>
-</div>
 
-
-
-
-				
 				<a href="Screenshot_2024-07-14-23-18-18.png" data-fluidbox>
 					<img src="Screenshot_2024-07-14-23-18-18.png" alt=""></a>
 				<a href="Screenshot_2024-07-14-23-18-57.png" data-fluidbox>
@@ -543,21 +511,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="common-js/jquery.fluidbox.min.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
-
-	
-<!-- JavaScript to Show/Hide Button -->
-<script>
-    $(document).ready(function() {
-        $('a[data-fluidbox]').fluidbox({
-            afterShow: function(){
-                $('#button-container').show();
-            },
-            afterClose: function(){
-                $('#button-container').hide();
-            }
-        });
-    });
-</script>
 	
 </body>
 </html>
